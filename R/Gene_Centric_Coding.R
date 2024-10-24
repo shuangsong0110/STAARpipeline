@@ -49,7 +49,7 @@ Gene_Centric_Coding <- function(chr,gene_name,category=c("all_categories","plof"
                                 QC_label="annotation/filter",variant_type=c("SNV","Indel","variant"),geno_missing_imputation=c("mean","minor"),
                                 Annotation_dir="annotation/info/FunctionalAnnotation",Annotation_name_catalog,
                                 Use_annotation_weights=c(TRUE,FALSE),Annotation_name=NULL,
-                                SPA_p_filter=TRUE,p_filter_cutoff=0.05,silent=FALSE){
+                                SPA_p_filter=TRUE,p_filter_cutoff=0.05,silent=FALSE, beta_1=1, beta_2=25){
 
 	## evaluate choices
 	category <- match.arg(category)
@@ -65,7 +65,7 @@ Gene_Centric_Coding <- function(chr,gene_name,category=c("all_categories","plof"
 		                  QC_label=QC_label,variant_type=variant_type,geno_missing_imputation=geno_missing_imputation,
 		                  Annotation_dir=Annotation_dir,Annotation_name_catalog=Annotation_name_catalog,
 		                  Use_annotation_weights=Use_annotation_weights,Annotation_name=Annotation_name,
-		                  SPA_p_filter=SPA_p_filter,p_filter_cutoff=p_filter_cutoff,silent=silent)
+		                  SPA_p_filter=SPA_p_filter,p_filter_cutoff=p_filter_cutoff,silent=silent, beta_1=beta_1, beta_2=beta_2)
 	}
 
 	if(category=="plof")
